@@ -15,7 +15,7 @@ class Solution:
         return -1
     
 
-# OUTRA FORMA DE RSOLVER
+# OUTRA FORMA DE RESOLVER
 
 
 from collections import Counter
