@@ -19,11 +19,11 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        hasher = {}
+        hasher = {} # cria o dicionário
 
-        for idx, i in enumerate(nums):
-            if hasher.get(i) is not None:
-                return [hasher.get(i), idx]
-            hasher[target-i] = idx
+        for idx, i in enumerate(nums): # para cada index e valor em NUMS ( o enumerate pega todo o valor do array e separa em index e valor)
+            if hasher.get(i) is not None: #Verifica se o valor de i ja esta no hashmap, se sim continua pro return, se n ele sai do IF
+                return [hasher.get(i), idx] # returna o valor e o index atual
+            hasher[target-i] = idx 
         
 
