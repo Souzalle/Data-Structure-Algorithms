@@ -24,16 +24,16 @@ All the words in s are separated by a single space.
 
 class Solution:
     def reverseWords(self, s: str) -> str:
-        words = s.split(" ")
-        invWord = []
+        words = s.split(" ") # pego a string dada salva em S e divido ela a cada espaço vazio, e salvo em words separadamente por virgula
+        invWord = [] # crio um array vazio
 
-        for word in words:
-            inv = word[::-1]
-            invWord.append(inv)
+        for word in words: # para cada word dentro do array words rodo o codigo
+            inv = word[::-1] # Inv recebe a palavra em word e inverte ela com o comando[::-1]
+            invWord.append(inv) # invWord recebe a variavel inv
 
-        res = " ".join(invWord)
+        res = " ".join(invWord) # res receve tudo dentro de invword, porem com metodo (" ".join) ele vai adicionar um espaço entre cada palavra e atribuir ao res 
 
-        return res
+        return res # retorna meu res
     
 """OUTRA SOLUÇÃO """
 
