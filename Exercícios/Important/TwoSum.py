@@ -24,6 +24,6 @@ class Solution:
         for idx, i in enumerate(nums): # para cada index e valor em NUMS ( o enumerate pega todo o valor do array e separa em index e valor)
             if hasher.get(i) is not None: #Verifica se o valor de i ja esta no hashmap, se sim continua pro return, se n ele sai do IF
                 return [hasher.get(i), idx] # returna o valor e o index atual
-            hasher[target-i] = idx 
+            hasher[target-i] = idx # pega o valor do terget e subtrai o valor atual de i e salva no hashmap - X(target -i) : Y(index atual)
         
 
