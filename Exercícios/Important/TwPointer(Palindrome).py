@@ -20,14 +20,14 @@ class Solution:
         r = len(s) - 1 # ponteiro direita
 
         while l < r: # enqt os ponteiros nao se encontrarem
-            if not s[l].isalnum():
-                l+=1
-            elif not s[r].isalnum():
-                r-=1
-            elif s[l].lower() == s[r].lower():
-                l+=1
-                r-=1
+            if not s[l].isalnum(): # se o ponteiro nao apontar para um caracter alfa numerico, ele pula uma casa pra frente
+                l+=1 # adiciona 1, anda uma pra frente
+            elif not s[r].isalnum(): # se o ponteiro nao apontar para um caracter alfa numerico, ele volta uma casa(ja q esse ponteiro esta vindo do final)
+                r-=1 # remove 1, volto uma para tras
+            elif s[l].lower() == s[r].lower(): # verifico se a letra no ponteiro da esquerda e direita sao iguals( como é um palindromo ela DEVE ser)
+                l+=1 # apos verificado ando uma casa para frente
+                r-=1 # apos vertificado ando uma para tras
             else:
-                return False
+                return False # se n foram iguais ja me retorna falso, nao é uum palindromo
         
-        return True
+        return True # se o while nao retornar falso, logo é um palindromo
