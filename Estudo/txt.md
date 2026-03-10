@@ -21,3 +21,6 @@ Regra prática:
 - Dividindo problema pela metade → O(log n)
 - Recursão com múltiplas chamadas → geralmente exponencial
 
+
+
+
